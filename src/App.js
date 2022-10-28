@@ -1,15 +1,21 @@
 import "./App.css";
 import Header from "./components/general/Header";
-import Home from "./components/screens/Home";
 import "../src/assets/css/style.css";
-import Banner from "./components/includes/Banner";
+import Footer from "./components/general/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SearchPage from "./components/screens/SearchPage";
+import HomePage from "./components/screens/HomePage";
+import MainRouter from "./components/routing/routers/MainRouter";
 
 function App() {
     return (
         <>
-            <Header />
-            <Banner />
-            <Home />
+            <Router>
+                {/* <Header />
+                <HomePage />
+                <Footer /> */}
+                <MainRouter />
+            </Router>
         </>
     );
 }

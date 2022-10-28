@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Search from "./Search";
+import Search from "../includes/Search";
 
 function Banner() {
     const [showSearch, setShowSearch] = useState(false);
@@ -22,7 +23,7 @@ function Banner() {
                         Plan a different kind of gateway to uncover the hidden
                         gems near you.
                     </Description>
-                    <Button>Explore nearby</Button>
+                    <Button to="/search">Explore nearby</Button>
                 </Section>
             </Container>
         </>
@@ -61,7 +62,8 @@ const Description = styled.h5`
     margin-bottom: 20px;
     font-family: gordita_regular;
 `;
-const Button = styled.a`
+const Button = styled(Link)`
+    cursor: pointer;
     background-color: #ff7779;
     color: #fff;
     font-family: gordita_medium;
